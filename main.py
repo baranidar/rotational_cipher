@@ -24,34 +24,9 @@ def get_cipher_value(input_char, rotation_factor):
   else:
     return str((int(input_char)+rotation_factor)%10)
 
-#-----------------------------------------------------------------------------------------------------------------------------
-# These are the tests we use to determine if the solution is correct.
-# You can add your own at the bottom.
-
-def printString(string):
-  print('[\"', string, '\"]', sep='', end='')
-
-test_case_number = 1
-
-def check(expected, output):
-  global test_case_number
-  result = False
-  if expected == output:
-    result = True
-  rightTick = '\u2713'
-  wrongTick = '\u2717'
-  if result:
-    print(rightTick, 'Test #', test_case_number, sep='')
-  else:
-    print(wrongTick, 'Test #', test_case_number, ': Expected ', sep='', end='')
-    printString(expected)
-    print(' Your output: ', end='')
-    printString(output)
-    print()
-  test_case_number += 1
 
 if __name__ == "__main__":
-  input = "Ahui-#123"
+  input = "2231Hy0*"
   rotation_factor = 4
   output = rotationalCipher(input, rotation_factor)
   print(output)
